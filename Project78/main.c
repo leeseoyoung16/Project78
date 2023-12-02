@@ -12,6 +12,7 @@ int move, compare;
 int min1(int x, int y) {
     return(x < y) ? x : y;
 }
+
 void print_array(int arr[], int size) { //과정 출력
     for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
@@ -90,6 +91,8 @@ int main(void) {
 
     printf("\nShell Sort\n");
     merge_sort(list, 0, n - 1, 0);
+
+    //printf("\nIterable Shell Sort\n");
     //merge_sort_iter(list, 0, n - 1, 0); //반복적 합병 정렬
     
 
@@ -103,7 +106,7 @@ int main(void) {
             list[i] = rand() % 100;
 
         merge_sort(list, 0, n - 1, 1);
-
+        //merge_sort_iter(list, 0, n - 1, 1); //반복적 합병 정렬
         move_count += move;
         compare_count += compare;
         count++;
